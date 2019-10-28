@@ -23,10 +23,8 @@ void MyEntity::setPosition(const sf::Vector2f& pos)
 }
 void MyEntity::setPosition(const int& x, const int& y)
 {
-	myTransform.setPosition(x, y);
+	myTransform.setPosition(x,y);
 }
-
-
 
 void MyEntity::draw(sf::RenderTarget& target)
 {
