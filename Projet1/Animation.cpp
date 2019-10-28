@@ -8,8 +8,8 @@ Animation::Animation(sf::Texture* texture, sf::Vector2u imageCount, float switch
 	this->switchTime = switchTime;
 	totalTime = 0.0f;
 	currentImage.x = 0;
-	uvReckt.width = texture->getSize().x / float(imageCount.x);
-	uvReckt.height = texture->getSize().y / float(imageCount.y);
+	uvReckt.width = (int)(texture->getSize().x / float(imageCount.x));
+	uvReckt.height = (int)(texture->getSize().y / float(imageCount.y));
 }
 
 

@@ -6,10 +6,10 @@ MyEntity::MyEntity(sf::Texture* texture, sf::Vector2u imageCount, float switchTi
 {
 	myTexture=texture;
 	mySprite.setTexture(*myTexture);
-	mySprite.setScale(.2, .2);
+	mySprite.setScale(.2f, .2f);
 	this->speed = speed;
-	uvReckt.left = (texture->getSize().x / float(imageCount.x));
-	uvReckt.height = (texture->getSize().y / float(imageCount.y));
+	uvReckt.left = (int)(texture->getSize().x / float(imageCount.x));
+	uvReckt.height = (int)(texture->getSize().y / float(imageCount.y));
 }
 
 

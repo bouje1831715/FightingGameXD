@@ -29,7 +29,7 @@ namespace GameView
 				data->window.close();
 			
 			data->inputManager.update(event);
-			myEntity->updateInput(FPS,true);
+			myEntity->updateInput((float)FPS,true);
 		}
 	}
 
