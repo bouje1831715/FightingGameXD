@@ -6,7 +6,7 @@ using namespace std;
 enum DamageType { PHYSICAL, FIRE, COLD, THUNDER, POISON };
 enum ExtraEffect {STUN, DOT};
 
-struct Damage 
+struct DamageInfo 
 {
 public:
 	DamageType Type;
@@ -19,12 +19,12 @@ public:
 class Character
 {
 public:
-	Character(string unitName, short baseDamage, short speed, short hp, short currentHP);
+	Character(string unitName, short baseDamage, short speed, short maxHP, short currentHP);
 	~Character();
 	
 	///<summary>Return true if the character is still alive</summary>
 	bool ApplyDamage(short damage);
-	virtual Damage GetDamage();
+	virtual DamageInfo GetDamage();
 
 protected:
 	string UnitName;

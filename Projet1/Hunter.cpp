@@ -2,7 +2,7 @@
 
 
 
-Hunter::Hunter()
+Hunter::Hunter(string unitName, short baseDamage, short speed, short maxHP, short currentHP) : Hero(unitName, baseDamage, speed, maxHP, currentHP)
 {
 }
 
@@ -11,9 +11,9 @@ Hunter::~Hunter()
 {
 }
 
-Damage Hunter::GetDamage()
+DamageInfo Hunter::GetDamage()
 {
-	Damage damage;
+	DamageInfo damage;
 	switch (EquipedBullet) {
 	case FIERY:
 		damage = { FIRE, 30, 6 };

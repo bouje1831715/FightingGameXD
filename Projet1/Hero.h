@@ -4,7 +4,7 @@ class Hero :
 	public Character
 {
 public:
-	Hero();
+	Hero(string unitName, short baseDamage, short speed, short maxHP, short currentHP);
 	~Hero();
 };
 

@@ -4,7 +4,7 @@ class Monster :
 	public Character
 {
 public:
-	Monster();
+	Monster(string unitName, short baseDamage, short speed, short maxHP, short currentHP);
 	~Monster();
 };
 

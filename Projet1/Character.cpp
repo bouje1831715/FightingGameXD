@@ -20,7 +20,7 @@ Character::~Character()
 {
 }
 
-Damage Character::GetDamage()
+DamageInfo Character::GetDamage()
 {
 	return { DamageType::PHYSICAL, BaseDamage };
 }
