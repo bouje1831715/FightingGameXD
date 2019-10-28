@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Animation.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MyEntity.cpp" />
+    <ClCompile Include="Object.cpp" />
+    <ClCompile Include="Platform.cpp" />
+    <ClCompile Include="State.cpp" />
+    <ClCompile Include="Manager\AssetManager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Manager\InputManager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Manager\StateManager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Collider.cpp">
+      <Filter>Physique</Filter>
+    </ClCompile>
+    <ClCompile Include="Level.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Animation.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="MyEntity.h" />
+    <ClInclude Include="Object.h" />
+    <ClInclude Include="Platform.h" />
+    <ClInclude Include="State.h" />
+    <ClInclude Include="Manager\AssetManager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Manager\InputManager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Manager\StateManager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Collider.h">
+      <Filter>Physique</Filter>
+    </ClInclude>
+    <ClInclude Include="Level.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Manager">
+      <UniqueIdentifier>{727194c2-6553-4f01-ab07-1e616d6215ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Physique">
+      <UniqueIdentifier>{42741acb-411b-4acb-a2f6-57a698a40dcb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
