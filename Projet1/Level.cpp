@@ -30,7 +30,7 @@ namespace GameView
 	void Level::drawPlayGround(sf::RenderTarget& target)
 	{
 		//need to see if we always draw all the map or just a part of it( with view settings )
-		for (int i = 0; i < playGround.size(); i++)
+	  /*for (int i = 0; i < playGround.size(); i++)
 		{
 			for (int j = 0; j < playGround[i].size(); j++)
 			{
@@ -39,6 +39,6 @@ namespace GameView
 					target.draw(playGround[i][j][k]);
 				}
 			}
-		}
+		}*/
 	}
 }

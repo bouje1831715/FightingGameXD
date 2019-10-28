@@ -27,7 +27,7 @@ namespace GameView
 	private:
 
 		vector<sf::Sprite> backGround;
-		vector<vector<sf::Sprite[]>> playGround;
+	//	vector<vector<sf::Sprite[]>> playGround;
 
 		Vector2i currentPos;
 		int layerSize;
