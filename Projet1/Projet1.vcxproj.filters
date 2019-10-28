@@ -21,6 +21,27 @@
       <Filter>Physique</Filter>
     </ClCompile>
     <ClCompile Include="Level.cpp" />
+    <ClCompile Include="Character.cpp">
+      <Filter>MetroidVania</Filter>
+    </ClCompile>
+    <ClCompile Include="Hero.cpp">
+      <Filter>MetroidVania</Filter>
+    </ClCompile>
+    <ClCompile Include="Hunter.cpp">
+      <Filter>MetroidVania</Filter>
+    </ClCompile>
+    <ClCompile Include="Monk.cpp">
+      <Filter>MetroidVania</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster.cpp">
+      <Filter>MetroidVania</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage.cpp">
+      <Filter>MetroidVania</Filter>
+    </ClCompile>
+    <ClCompile Include="World.cpp">
+      <Filter>MetroidVania</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animation.h" />
@@ -42,6 +63,27 @@
       <Filter>Physique</Filter>
     </ClInclude>
     <ClInclude Include="Level.h" />
+    <ClInclude Include="Character.h">
+      <Filter>MetroidVania</Filter>
+    </ClInclude>
+    <ClInclude Include="Hero.h">
+      <Filter>MetroidVania</Filter>
+    </ClInclude>
+    <ClInclude Include="Hunter.h">
+      <Filter>MetroidVania</Filter>
+    </ClInclude>
+    <ClInclude Include="Monk.h">
+      <Filter>MetroidVania</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster.h">
+      <Filter>MetroidVania</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage.h">
+      <Filter>MetroidVania</Filter>
+    </ClInclude>
+    <ClInclude Include="World.h">
+      <Filter>MetroidVania</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Manager">
@@ -49,6 +91,9 @@
     </Filter>
     <Filter Include="Physique">
       <UniqueIdentifier>{42741acb-411b-4acb-a2f6-57a698a40dcb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MetroidVania">
+      <UniqueIdentifier>{f00e6e83-d2d5-4beb-91ad-d443afc3f1a7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
