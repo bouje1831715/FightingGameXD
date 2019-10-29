@@ -37,7 +37,6 @@ namespace GameView
 		void updateLogic();
 		void render();
 		void updateEvent();
-
 		const float dt = 1.0f / 60;
 		Clock clock;
 		const unsigned int FPS = 60;

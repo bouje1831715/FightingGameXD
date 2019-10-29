@@ -1,19 +1,17 @@
 #pragma once
 #include <SFML\Graphics.hpp>
+using namespace sf;
 class Collider
 {
 public:
-	Collider(sf::RectangleShape body);
+	Collider(RectangleShape* _body);
 	~Collider();
 
-	void move(float dx, float dy) { body.move(dx, dy); }
-
-	bool checkCollision(Collider& other, float push);
-	sf::Vector2f GetPosition() { return body.getPosition(); }
-	sf::Vector2f GetHalfSize() { return body.getSize() / 2.0f; }
+	bool checkCollision(RectangleShape* other, float push);
+	sf::Vector2f GetHalfSize(RectangleShape* _body) { return _body->getSize() / 2.0f; }
 
 
 private :
-	sf::RectangleShape& body;
+	sf::RectangleShape* body;
 };
 

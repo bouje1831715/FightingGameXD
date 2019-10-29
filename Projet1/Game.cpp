@@ -7,7 +7,8 @@ namespace GameView
 		data->window.setVerticalSyncEnabled(true);
 		data->window.create(VideoMode(width, height), titleScreen, Style::Close | Style::Titlebar);
 		myTexture.loadFromFile("Image/Capture.png");
-		myEntity = new MyEntity(&myTexture, sf::Vector2u(3, 2), 0.001f, 0.01f);
+		test = new Platform(&myTexture, Vector2f(100.0f, 30.0f), Vector2f(200.0f, 150.0f));
+		myEntity = new MyEntity(&myTexture,sf::Vector2f(20.0f,45.0f), sf::Vector2u(3, 2), 0.001f, 0.1f);
 	}
 
 	Game::~Game()
@@ -28,14 +29,16 @@ namespace GameView
 			if (event.type == Event::Closed)
 				data->window.close();
 			
+			
 			data->inputManager.update(event);
-			myEntity->updateInput((float)FPS,true);
+			myEntity->updateInput((float)FPS);
 		}
 	}
 
 	void Game::updateLogic()
 	{
-		test->GetCollider().checkCollision(myEntity->GetCollider(), 1.0f);
+		if (test->hitbox->checkCollision(myEntity->GetCollider(), 1.0f))
+			myEntity->moveOnHitBox();
 	}
 	void Game::update()
 	{
@@ -60,7 +63,7 @@ namespace GameView
 		data->window.clear(Color::Black);
 
 		myEntity->draw(data->window);
-
+		test->Draw(data->window);
 
 		data->window.display();
 	}

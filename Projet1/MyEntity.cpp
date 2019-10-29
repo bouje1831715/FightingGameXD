@@ -2,14 +2,20 @@
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML\Window\Keyboard.hpp>
 
-MyEntity::MyEntity(sf::Texture* texture, sf::Vector2u imageCount, float switchTime, float speed) : animation(texture,imageCount,switchTime)
+MyEntity::MyEntity(sf::Texture* texture,Vector2f size, sf::Vector2u imageCount, float switchTime, float speed) : animation(texture,imageCount,switchTime)
 {
+	body = new RectangleShape();
+	body->setOrigin(Vector2f(0.0f,0.0f));
+	body->setSize(size);
+	body->setTexture(texture);
+	body->setPosition(0.0f, 0.0f);
 	myTexture=texture;
 	mySprite.setTexture(*myTexture);
 	mySprite.setScale(.2f, .2f);
 	this->speed = speed;
 	uvReckt.left = (int)(texture->getSize().x / float(imageCount.x));
 	uvReckt.height = (int)(texture->getSize().y / float(imageCount.y));
+	hitbox = new Collider(body);
 }
 
 
@@ -20,10 +26,12 @@ MyEntity::~MyEntity()
 void MyEntity::setPosition(const sf::Vector2f& pos)
 {
 	myTransform.setPosition(pos.x, pos.y);
+	body->setPosition(pos);
 }
 void MyEntity::setPosition(const int& x, const int& y)
 {
 	myTransform.setPosition(x, y);
+	body->setPosition(Vector2f(x, y));
 }
 
 
@@ -62,10 +70,16 @@ void MyEntity::updateInput(float fps)
 	{
 		row = 0;
 	}
+
+		lastPos = GetPosition();
 		animation.Update(row, fps);
 		mySprite.setTextureRect(animation.uvReckt);
-		myTransform.setPosition(myTransform.getPosition() + movements);
-	
+		setPosition(myTransform.getPosition() + movements);	
+}
+
+void MyEntity::moveOnHitBox()
+{
+	setPosition(body->getPosition());
 }
 
 void MyEntity::updateInput(float fps,bool is2D) {
@@ -83,5 +97,5 @@ void MyEntity::updateInput(float fps,bool is2D) {
 		animation.Update(0, fps);
 	}
 	mySprite.setTextureRect(animation.uvReckt);
-	myTransform.setPosition(myTransform.getPosition() + movements);
+	setPosition(myTransform.getPosition() + movements);
 }

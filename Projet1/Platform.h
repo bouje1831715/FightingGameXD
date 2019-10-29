@@ -8,9 +8,13 @@ public:
 	~Platform();
 
 	void Draw(sf::RenderWindow& window);
-	Collider GetCollider() { return body; }
-	
+	RectangleShape* GetCollider() 
+	{ 
+		return body; 
+	}
+
+	Collider* hitbox;
 private:
-	sf::RectangleShape body;
+	sf::RectangleShape* body;
 };
 
