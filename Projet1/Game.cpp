@@ -35,7 +35,7 @@ namespace GameView
 
 	void Game::updateLogic()
 	{
-
+		test->GetCollider().checkCollision(myEntity->GetCollider(), 1.0f);
 	}
 	void Game::update()
 	{

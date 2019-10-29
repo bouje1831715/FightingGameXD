@@ -17,7 +17,7 @@ public:
 	void updateInput(float fps);
 
 	sf::Vector2f GetPosition() { return body.getPosition(); }
-	Collider GetCollider() { return Collider(body); }
+	Collider GetCollider() { return body; }
 	void updateInput(float fps, bool is2D);
 private:
 	sf::RectangleShape body;
