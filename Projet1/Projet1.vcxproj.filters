@@ -4,10 +4,8 @@
     <ClCompile Include="Animation.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="MyEntity.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="Platform.cpp" />
-    <ClCompile Include="State.cpp" />
     <ClCompile Include="Manager\AssetManager.cpp">
       <Filter>Manager</Filter>
     </ClCompile>
@@ -21,6 +19,8 @@
       <Filter>Physique</Filter>
     </ClCompile>
     <ClCompile Include="Level.cpp" />
+	<Filter>Physique</Filter>
+	</ClCompile>
     <ClCompile Include="Character.cpp">
       <Filter>MetroidVania</Filter>
     </ClCompile>
@@ -42,14 +42,26 @@
     <ClCompile Include="World.cpp">
       <Filter>MetroidVania</Filter>
     </ClCompile>
+    <ClCompile Include="MyEntity.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="State.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityState.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="StateMachine.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelLoader.cpp" />
+    <ClCompile Include="Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animation.h" />
     <ClInclude Include="Game.h" />
-    <ClInclude Include="MyEntity.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="Platform.h" />
-    <ClInclude Include="State.h" />
     <ClInclude Include="Manager\AssetManager.h">
       <Filter>Manager</Filter>
     </ClInclude>
@@ -63,6 +75,8 @@
       <Filter>Physique</Filter>
     </ClInclude>
     <ClInclude Include="Level.h" />
+	  <Filter>Physique</Filter>
+    </ClInclude>
     <ClInclude Include="Character.h">
       <Filter>MetroidVania</Filter>
     </ClInclude>
@@ -84,6 +98,20 @@
     <ClInclude Include="World.h">
       <Filter>MetroidVania</Filter>
     </ClInclude>
+    <ClInclude Include="MyEntity.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="State.h">
+      <Filter>Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityState.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="StateMachine.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelLoader.h" />
+    <ClInclude Include="Utils.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Manager">
@@ -94,6 +122,11 @@
     </Filter>
     <Filter Include="MetroidVania">
       <UniqueIdentifier>{f00e6e83-d2d5-4beb-91ad-d443afc3f1a7}</UniqueIdentifier>
+    <Filter Include="Player">
+      <UniqueIdentifier>{f7c7728e-1271-41c7-a804-b17e5e74782e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menu">
+      <UniqueIdentifier>{80dd15b2-f534-40cc-9d7a-20b4dfc9c9a5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -1,0 +1,1 @@
+../MetroidVania/Church.png Church|../MetroidVania/Church.png clown
