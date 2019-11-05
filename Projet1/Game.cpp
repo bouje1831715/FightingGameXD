@@ -92,11 +92,8 @@ namespace GameView
 			e->Draw(data->window);
 		}
 
-
 		/*myEntity->draw(data->window);
 		test->Draw(data->window);*/
-	
-		myEntity->draw(data->window);
 
 		data->window.display();
 	}

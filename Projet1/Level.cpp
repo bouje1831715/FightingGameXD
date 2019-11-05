@@ -39,7 +39,7 @@ namespace GameView
 						int top = levelInfo[i][j][k].IndexesY[0]* tileSize;
 						
 						sp.setTextureRect(IntRect(left,top , tileSize, tileSize));
-						sp.scale(Vector2f(scale, scale));
+						sp.scale(Vector2f((float)scale, (float)scale));
 						sp.setPosition(Vector2f(j*(tileSize *scale),k*(tileSize* scale)));
 						playGround[i][j].push_back(sp);;
 					}

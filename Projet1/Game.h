@@ -45,7 +45,6 @@ namespace GameView
 		Platform* test;
 
 		vector<Entity*> entities;
-		MyEntity* myEntity;
 		Texture myTexture;
 		Level level;
 
