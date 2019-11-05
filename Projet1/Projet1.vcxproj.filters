@@ -32,6 +32,7 @@
       <Filter>Player</Filter>
     </ClCompile>
     <ClCompile Include="LevelLoader.cpp" />
+    <ClCompile Include="Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animation.h" />
@@ -64,6 +65,7 @@
       <Filter>Player</Filter>
     </ClInclude>
     <ClInclude Include="LevelLoader.h" />
+    <ClInclude Include="Utils.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Manager">

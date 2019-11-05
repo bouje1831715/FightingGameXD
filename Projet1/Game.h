@@ -47,7 +47,6 @@ namespace GameView
 
 		MyEntity* myEntity;
 		Texture myTexture;
-
-
+		Level level;
 	};
 }

@@ -3,6 +3,7 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Texture.hpp>
+#include "Manager/AssetManager.h"
 
 
 using namespace sf;
@@ -17,9 +18,8 @@ namespace GameView
 		Level();
 		~Level();
 
-
 		// charge les sprites pour le backGround et le playGround
-		void init();
+		void init(AssetManager& asset);
 
 		void drawBackGround(sf::RenderTarget& target);
 		void drawPlayGround(sf::RenderTarget& target);
@@ -27,7 +27,7 @@ namespace GameView
 	private:
 
 		vector<sf::Sprite> backGround;
-	//	vector<vector<sf::Sprite[]>> playGround;
+		vector<vector<vector<sf::Sprite>>> playGround;
 
 		Vector2i currentPos;
 		int layerSize;
