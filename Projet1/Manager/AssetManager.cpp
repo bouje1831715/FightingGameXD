@@ -1,4 +1,5 @@
 #include "AssetManager.h"
+#include <iostream>
 
 
 namespace GameView
@@ -11,6 +12,22 @@ namespace GameView
 
 	void AssetManager::loadFromLevel(LevelInfo levelInfo)
 	{
+		string fileName = getNameFile(levelInfo);
+		string levelLoader = "";
+		try
+		{
+			fileStream.open("test.txt");
+		}
+		catch (const std::exception& e)
+		{
+			std::cout << e.what();
+		}
+		if( !fileStream.bad() )
+		{
+			levelLoader = readFromLoadedFile();
+		}
+		
+		 
 		/* test 1-2 test/
 		need to load from a file ( or all load before game is launch )
 		Exemple d'utilisation
@@ -61,4 +78,30 @@ namespace GameView
 		return fontInfo.at(name);
 	}
 
+	string AssetManager::getNameFile(LevelInfo levelInfo)
+	{
+		string fileName = "";
+
+		switch (levelInfo)
+		{
+			case LevelInfo::levelIntro: fileName = "levelIntro.txt"; break;
+		}
+		return fileName;
+	}
+
+	string AssetManager::readFromLoadedFile()
+	{
+		string inputFile = "";
+		string line = "";
+
+		if (fileStream.is_open())
+		{
+			while (getline(fileStream, line))
+			{
+				inputFile.append(line);
+			}
+			fileStream.close();
+		}
+		return inputFile;
+	}
 }
