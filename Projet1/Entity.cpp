@@ -3,12 +3,13 @@
 
 Entity::Entity()
 {
+	body = new RectangleShape();
 }
 
 
 Entity::~Entity()
 {
-
+	delete body;
 }
 
 void Entity::setPosition(const sf::Vector2f& pos)
@@ -33,4 +34,9 @@ void Entity::Draw(sf::RenderTarget& target)
 	animator.Update();
 	Sprite* s = animator.GetSprite();
 	target.draw(*s, position.getTransform());
+}
+
+void Entity::MoveOnHitBox()
+{
+	setPosition(body->getPosition());
 }

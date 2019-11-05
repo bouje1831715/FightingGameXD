@@ -36,19 +36,14 @@ namespace GameView
 		void updateLogic();
 		void render();
 		void updateEvent();
-<<<<<<< HEAD
 
 		TimeManager timeManager;
-=======
-		const float dt = 1.0f / 60;
-		Clock clock;
->>>>>>> e39a63a7813f267956b6dd0c8b2571982ac21769
+
 		const unsigned int FPS = 60;
 		
 		GameDataRef data = std::make_shared<GameData>();
 		Platform* test;
 
 		vector<Entity*> entities;
-		Texture myTexture;
 	};
 }

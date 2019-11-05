@@ -5,7 +5,6 @@ namespace GameView
 {
 	Game::Game(int width, int height, string titleScreen)
 	{
-
 		data->window.setVerticalSyncEnabled(true);
 		data->window.create(VideoMode(width, height), titleScreen, Style::Close | Style::Titlebar);
 		InputManager inputManager;

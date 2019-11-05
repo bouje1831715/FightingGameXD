@@ -20,9 +20,12 @@ public:
 	void Update();
 	void Draw(sf::RenderTarget& target);
 
+	void MoveOnHitBox();
+
 protected:
 	Animator animator;
 	sf::Transformable position;
 	Action& CurrentAction = Action();
+	sf::RectangleShape* body;
 };
 
