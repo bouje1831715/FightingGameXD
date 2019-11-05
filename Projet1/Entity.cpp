@@ -1,9 +1,13 @@
 #include "Entity.h"
 #include "TimeManager.h"
+#include "Monk.h"
+#include "Action.h"
+#include "PlayerStanding.h"
 
 Entity::Entity()
 {
 	body = new RectangleShape();
+	CurrentAction = new Action();
 }
 
 
@@ -24,9 +28,9 @@ void Entity::setPosition(const int& x, const int& y)
 void Entity::Update()
 {
 
-	int i = CurrentAction.Update();
+	int i = (CurrentAction)->Update();
 	if (i != -1)
-		this->ChangeAction(i);
+		(this)->ChangeAction(i);
 }
 
 void Entity::Draw(sf::RenderTarget& target)

@@ -6,7 +6,7 @@
 Monk::Monk() : Hero("Monk", 50, 10, 30)
 {
 	AddAnimations();
-	CurrentAction = PlayerStanding();
+	CurrentAction = new PlayerStanding();
 }
 
 Monk::~Monk()
@@ -23,6 +23,7 @@ void Monk::ChangeAction(int enumIndex)
 		animator.ChangeAnimation("Walk");
 		break;
 	case CROUNCH:
+		animator.ChangeAnimation("Flying kick");
 		break;
 	case JUMP:
 		break;
@@ -133,7 +134,7 @@ void Monk::AddAnimations()
 	indexes.push_back({ 1, 2 });
 	showTimes.push_back(100);
 
-	animator.AddAnimation(new Animation(ts, indexes, showTimes, false), "Flying kick");
+	animator.AddAnimation(new Animation(ts, indexes, showTimes), "Flying kick");
 
 	indexes = vector<Coord>();
 	showTimes = vector<int>();

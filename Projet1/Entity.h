@@ -17,7 +17,7 @@ public:
 	void setPosition(const int& x, const int& y);
 
 	virtual void ChangeAction(int enumPlaceholder) = 0;
-	void Update();
+	void Update() ;
 	void Draw(sf::RenderTarget& target);
 
 	void MoveOnHitBox();
@@ -25,7 +25,7 @@ public:
 protected:
 	Animator animator;
 	sf::Transformable position;
-	Action& CurrentAction = Action();
+	Action* CurrentAction;
 	sf::RectangleShape* body;
 };
 
