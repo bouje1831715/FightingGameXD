@@ -4,14 +4,10 @@
     <ClCompile Include="Animation.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="MyEntity.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="Platform.cpp" />
     <ClCompile Include="State.cpp" />
     <ClCompile Include="Manager\AssetManager.cpp">
-      <Filter>Manager</Filter>
-    </ClCompile>
-    <ClCompile Include="Manager\InputManager.cpp">
       <Filter>Manager</Filter>
     </ClCompile>
     <ClCompile Include="Manager\StateManager.cpp">
@@ -42,18 +38,26 @@
     <ClCompile Include="World.cpp">
       <Filter>MetroidVania</Filter>
     </ClCompile>
+    <ClCompile Include="Action.cpp" />
+    <ClCompile Include="Animator.cpp" />
+    <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="TimeManager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="InputManager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerStanding.cpp">
+      <Filter>MetroidVania\PlayerAction</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animation.h" />
     <ClInclude Include="Game.h" />
-    <ClInclude Include="MyEntity.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="Platform.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="Manager\AssetManager.h">
-      <Filter>Manager</Filter>
-    </ClInclude>
-    <ClInclude Include="Manager\InputManager.h">
       <Filter>Manager</Filter>
     </ClInclude>
     <ClInclude Include="Manager\StateManager.h">
@@ -84,6 +88,19 @@
     <ClInclude Include="World.h">
       <Filter>MetroidVania</Filter>
     </ClInclude>
+    <ClInclude Include="Action.h" />
+    <ClInclude Include="Animator.h" />
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="HeroActionsEnum.h" />
+    <ClInclude Include="TimeManager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerStanding.h">
+      <Filter>MetroidVania\PlayerAction</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Manager">
@@ -94,6 +111,9 @@
     </Filter>
     <Filter Include="MetroidVania">
       <UniqueIdentifier>{f00e6e83-d2d5-4beb-91ad-d443afc3f1a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MetroidVania\PlayerAction">
+      <UniqueIdentifier>{c87cb85c-3b12-4166-9ec6-90a3d07b6217}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
