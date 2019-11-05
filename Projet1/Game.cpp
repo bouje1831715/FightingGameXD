@@ -29,6 +29,8 @@ namespace GameView
 	void Game::init()
 	{
 		data->window.setFramerateLimit(FPS);
+		data->assetManager.init();
+		level.init(data->assetManager);
 	}
 
 	void Game::updateEvent()
@@ -81,6 +83,9 @@ namespace GameView
 	void Game::render()
 	{
 		data->window.clear(Color::Black);
+		
+		level.drawPlayGround(data->window);
+		
 		for (Entity* e : entities)
 		{
 			e->Draw(data->window);

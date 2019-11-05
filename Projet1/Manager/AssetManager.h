@@ -1,7 +1,9 @@
 #pragma once
 #include <map>
-#include <SFML/Graphics.hpp>
 #include <string>
+#include <SFML/Graphics.hpp>
+#include <SFML/System/FileInputStream.hpp>
+
 
 using namespace std;
 using namespace sf;
@@ -27,16 +29,24 @@ namespace GameView
 		AssetManager();
 		~AssetManager();
 
+		void init();
 		void loadFromLevel(LevelInfo levelInfo);
 
 		void loadTexture(string name, string fileName);
 		void loadTexture(string name, string fileName, Vector2i size, Vector2i pos);
-		sf::Texture &getTexture(string name);
+		Texture &getTexture(string name);
 
 		void loadFont(string name, string fileName);
-		sf::Font &getFont(string name);
+		Font &getFont(string name);
 
 	private:
+		void preLoadSprite(const string& fileName);
+
+		vector<string> tabFileToLoad;
+
+		string getNameFile(LevelInfo levelInfo);
+	
+
 		map<string,Texture> textureInfo;
 		map<string,Font> fontInfo;
 	};

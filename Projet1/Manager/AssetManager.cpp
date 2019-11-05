@@ -1,34 +1,22 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include "../Utils.h"
 #include "AssetManager.h"
 
 
 namespace GameView
 {
-	AssetManager::AssetManager() 
-	{
-
-	}
+	AssetManager::AssetManager() {}
 	AssetManager::~AssetManager(){}
 
+	void AssetManager::init()
+	{
+		preLoadSprite("../MetroidVania/MetroidVaniaSprite.txt");
+	}
 	void AssetManager::loadFromLevel(LevelInfo levelInfo)
 	{
-		/* test 1-2 test/
-		need to load from a file ( or all load before game is launch )
-		Exemple d'utilisation
-		TextureInfo textInfo;
-		textInfo.name = "test";
-		textInfo.path = "Image/boss.png";
-		textInfo.size = Vector2i(946, 416);
-		textInfo.pos = Vector2i(0, 0);
-
-		loadTexture(textInfo.name, textInfo.path, textInfo.size, textInfo.pos);
-		*/
-
-		//WIP 
-		switch (levelInfo)
-		{
-			case LevelInfo::levelIntro:
-			break;
-		}
+		string fileName = getNameFile(levelInfo);
 	}
 
 	void AssetManager::loadTexture(string name, string fileName)
@@ -61,4 +49,30 @@ namespace GameView
 		return fontInfo.at(name);
 	}
 
+	string AssetManager::getNameFile(LevelInfo levelInfo)
+	{
+		string fileName = "";
+
+		switch (levelInfo)
+		{
+			case LevelInfo::levelIntro: fileName = "levelIntro.txt"; break;
+		}
+		return fileName;
+	}
+
+	void AssetManager::preLoadSprite(const string& fileName)
+	{
+		string fileInfo = Utils::readFromFile(fileName);
+		vector<string> info = Utils::Split(fileInfo, '|');
+		for each (string infoMap in info)
+		{
+			int spaceNo = infoMap.find(' ');
+			string fileName = infoMap.substr(0, spaceNo);
+			string mapName = infoMap.substr(spaceNo+1, infoMap.size());
+
+			Texture texture; 
+			texture.loadFromFile(fileName);
+			textureInfo.insert( {mapName,texture} );
+		}
+	}
 }
