@@ -7,7 +7,7 @@ class Hunter :
 	public Hero
 {
 public:
-	Hunter(string unitName, short baseDamage, short speed, short maxHP, short currentHP);
+	Hunter(string unitName, short baseDamage, short speed, short maxHP);
 	~Hunter();
 	DamageInfo GetDamage() override;
 private:

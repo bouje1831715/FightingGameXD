@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <vector>
+#include "Entity.h"
 using namespace std;
 
 enum DamageType { PHYSICAL, FIRE, COLD, THUNDER, POISON };
@@ -16,15 +17,18 @@ public:
 	vector<short> Magnitudes = { };
 };
 
-class Character
+class Character :
+	public Entity
 {
 public:
-	Character(string unitName, short baseDamage, short speed, short maxHP, short currentHP);
+	Character(string unitName, short baseDamage, short speed, short maxHP);
 	~Character();
 	
 	///<summary>Return true if the character is still alive</summary>
 	bool ApplyDamage(short damage);
 	virtual DamageInfo GetDamage();
+
+	virtual void ChangeAction(int enumIndex) = 0;
 
 protected:
 	string UnitName;

@@ -2,7 +2,7 @@
 
 
 
-Hunter::Hunter(string unitName, short baseDamage, short speed, short maxHP, short currentHP) : Hero(unitName, baseDamage, speed, maxHP, currentHP)
+Hunter::Hunter(string unitName, short baseDamage, short speed, short maxHP) : Hero(unitName, baseDamage, speed, maxHP)
 {
 }
 

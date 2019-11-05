@@ -2,24 +2,36 @@
 #include <string>
 #include <SFML/Graphics.hpp>
 #include "./Manager/StateManager.h"
-#include "./Manager/InputManager.h"
 #include "./Manager/AssetManager.h"
+
+struct Coord {
+	int x;
+	int y;
+};
+
+struct Tileset {
+	sf::Texture* texture;
+	int nbRows;
+	int nbColums;
+};
 
 class Animation
 {
 public:
-	Animation(sf::Texture* texture,sf::Vector2u imageCount,float switchTime);
+	Animation(Tileset ts, vector<Coord> indexes, vector<int> showTimes, bool loop = true);
 	~Animation();
+	void Update();
+	Sprite* GetSprite();
 
-	void Update(int row, float deltaTime);
+private:
+	int currentFrame;
+	float currentTime;
 
+	sf::Sprite* currentSprite;
 	sf::IntRect uvReckt;
 
-private :
-	sf::Vector2u imageCount;
-	sf::Vector2u currentImage;
-
-	float totalTime;
-	float switchTime;
+	Tileset ts;
+	vector<Coord> indexes;
+	vector<int> showTimes;
 };
 

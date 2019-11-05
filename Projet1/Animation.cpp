@@ -1,37 +1,55 @@
 #include "Animation.h"
+#include "TimeManager.h"
+#include <math.h>
 
-
-
-Animation::Animation(sf::Texture* texture, sf::Vector2u imageCount, float switchTime)
+Animation::Animation(Tileset ts, vector<Coord> indexes, vector<int> showTimes, bool loop)
 {
-	this->imageCount = imageCount;
-	this->switchTime = switchTime;
-	totalTime = 0.0f;
-	currentImage.x = 0;
-	uvReckt.width = (int)(texture->getSize().x / float(imageCount.x));
-	uvReckt.height = (int)(texture->getSize().y / float(imageCount.y));
-}
+	this->indexes = indexes;
+	currentFrame = 0;
+	currentTime = 0;
 
+	if (size(indexes) > size(showTimes))
+		this->showTimes = { -1 };
+	else 
+		this->showTimes = showTimes;
+
+	if (!loop)
+		this->showTimes[size(showTimes) - 1] = -1;
+
+	currentSprite = new Sprite();
+	currentSprite->setTexture(*ts.texture);
+	uvReckt.width = (int)floor((ts.texture->getSize().x / float(ts.nbColums)));
+	uvReckt.height = (int)floor((ts.texture->getSize().y / float(ts.nbRows)));
+	
+}
 
 Animation::~Animation()
 {
+	delete ts.texture;
+	delete currentSprite;
 }
 
-void Animation::Update(int row, float deltaTime) 
+void Animation::Update()
 {
-	currentImage.y = row;
-	totalTime = deltaTime;
-
-	if (totalTime >= switchTime) 
+	if (showTimes[currentFrame] != -1)
 	{
-		totalTime -= switchTime;
-		currentImage.x++;
+		currentTime += TimeManager::DeltaTime;
+		if (currentTime >= (float)showTimes[currentFrame]/1000)
+		{
+			currentTime -= (float)showTimes[currentFrame]/1000;
+			currentFrame++;
 
-		if (currentImage.x >= imageCount.x)
-			currentImage.x = 0;
+			if (currentFrame >= size(indexes)) 
+				currentFrame = 0;
 
-		uvReckt.left = currentImage.x*uvReckt.width;
-		uvReckt.top = currentImage.y*uvReckt.height;
+			uvReckt.left = indexes[currentFrame].x * uvReckt.width;
+			uvReckt.top = indexes[currentFrame].y * uvReckt.height;
+			currentSprite->setTextureRect(uvReckt);
+		}
 	}
 }
 
+Sprite* Animation::GetSprite()
+{
+	return currentSprite;
+}

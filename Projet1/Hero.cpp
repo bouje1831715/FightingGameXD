@@ -2,11 +2,18 @@
 
 
 
-Hero::Hero(string unitName, short baseDamage, short speed, short maxHP, short currentHP = 0) : Character (unitName, baseDamage, speed, maxHP, currentHP)
+Hero::Hero(string unitName, short baseDamage, short speed, short maxHP) : Character (unitName, baseDamage, speed, maxHP)
 {
+	IM = InputManager();
 }
 
 
 Hero::~Hero()
 {
+
+}
+
+void Hero::ChangeAction(int enumIndex)
+{
+	
 }

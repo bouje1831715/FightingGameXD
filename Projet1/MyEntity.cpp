@@ -2,6 +2,11 @@
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML\Window\Keyboard.hpp>
 
+<<<<<<< HEAD
+MyEntity::MyEntity()
+{
+	/*myTexture=texture;
+=======
 MyEntity::MyEntity(sf::Texture* texture,Vector2f size, sf::Vector2u imageCount, float switchTime, float speed) : animation(texture,imageCount,switchTime)
 {
 	body = new RectangleShape();
@@ -10,12 +15,16 @@ MyEntity::MyEntity(sf::Texture* texture,Vector2f size, sf::Vector2u imageCount, 
 	body->setTexture(texture);
 	body->setPosition(0.0f, 0.0f);
 	myTexture=texture;
+>>>>>>> e39a63a7813f267956b6dd0c8b2571982ac21769
 	mySprite.setTexture(*myTexture);
 	mySprite.setScale(.2f, .2f);
-	this->speed = speed;
 	uvReckt.left = (int)(texture->getSize().x / float(imageCount.x));
+<<<<<<< HEAD
+	uvReckt.height = (int)(texture->getSize().y / float(imageCount.y));*/
+=======
 	uvReckt.height = (int)(texture->getSize().y / float(imageCount.y));
 	hitbox = new Collider(body);
+>>>>>>> e39a63a7813f267956b6dd0c8b2571982ac21769
 }
 
 
@@ -30,18 +39,21 @@ void MyEntity::setPosition(const sf::Vector2f& pos)
 }
 void MyEntity::setPosition(const int& x, const int& y)
 {
+<<<<<<< HEAD
+	//myTransform.setPosition(x, y);
+=======
 	myTransform.setPosition(x, y);
 	body->setPosition(Vector2f(x, y));
+>>>>>>> e39a63a7813f267956b6dd0c8b2571982ac21769
 }
-
 
 
 void MyEntity::draw(sf::RenderTarget& target)
 {
-	target.draw(mySprite, myTransform.getTransform());
+	//target.draw(mySprite, myTransform.getTransform());
 }
 
-void MyEntity::updateInput(float fps)
+/*void MyEntity::updateInput(float fps)
 {
 
 	sf::Vector2f movements = { 0.0f,0.0f };
@@ -82,7 +94,7 @@ void MyEntity::moveOnHitBox()
 	setPosition(body->getPosition());
 }
 
-void MyEntity::updateInput(float fps,bool is2D) {
+void MyEntity::updateInput(float fps, bool is2D) {
 
 	sf::Vector2f movements = { 0.0f,0.0f };
 
@@ -97,5 +109,10 @@ void MyEntity::updateInput(float fps,bool is2D) {
 		animation.Update(0, fps);
 	}
 	mySprite.setTextureRect(animation.uvReckt);
+<<<<<<< HEAD
+	myTransform.setPosition(myTransform.getPosition() + movements);
+}*/
+=======
 	setPosition(myTransform.getPosition() + movements);
 }
+>>>>>>> e39a63a7813f267956b6dd0c8b2571982ac21769
