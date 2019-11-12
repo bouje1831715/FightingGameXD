@@ -7,11 +7,12 @@
 #include "HunterJumpMid.h"
 #include "Falling.h"
 #include "Crounching.h"
+#include "HunterShoot.h"
 
 Hunter::Hunter() : Hero("Hunter", 50, 100)
 {
 	acc = 800;
-	maxVelX = 270;
+	maxVelX = 350;
 	drag = 1200;
 	jumpingStrength = 600;
 	airdrag = 400;
@@ -61,6 +62,11 @@ void Hunter::ChangeAction(int enumIndex)
 		animator.ChangeAnimation("Crounch");
 		delete CurrentAction;
 		CurrentAction = new Crounching(this);
+		break;
+	case BASICATTACK:
+		animator.ChangeAnimation("Shoot");
+		delete CurrentAction;
+		CurrentAction = new HunterShoot(this);
 		break;
 	}
 }

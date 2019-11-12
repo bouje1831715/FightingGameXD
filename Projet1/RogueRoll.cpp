@@ -14,7 +14,7 @@ RogueRoll::RogueRoll(Entity* e) : Action(e)
 	else if (left)
 		parent->isFacingLeft = true;
 	parent->isAirborne = true;
-	timeRemaining = 0.350f;
+	timeRemaining = 0.60f;
 }
 
 RogueRoll::~RogueRoll()
@@ -23,7 +23,16 @@ RogueRoll::~RogueRoll()
 
 int RogueRoll::Update()
 {
+	if (parent->isFacingLeft)
+		parent->accelerate(-2);
+	else
+		parent->accelerate(2);
+
 	timeRemaining -= TimeManager::DeltaTime;
 	if (timeRemaining < 0)
+	{
+		parent->isFacingLeft = !parent->isFacingLeft;
 		return (int)PlayerAction::STAND;
+	}
+	return - 1;
 }

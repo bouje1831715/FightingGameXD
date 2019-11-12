@@ -136,7 +136,13 @@
     <ClCompile Include="Action.cpp">
       <Filter>Engine</Filter>
     </ClCompile>
-    <ClCompile Include="RogueRoll.cpp" />
+    <ClCompile Include="HunterShoot.cpp" />
+    <ClCompile Include="RogueRoll.cpp">
+      <Filter>Vania\Actions\Rogue</Filter>
+    </ClCompile>
+    <ClCompile Include="RogueCrounch.cpp">
+      <Filter>Vania\Actions\Rogue</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Level.h" />
@@ -274,7 +280,13 @@
     <ClInclude Include="Action.h">
       <Filter>Engine</Filter>
     </ClInclude>
-    <ClInclude Include="RogueRoll.h" />
+    <ClInclude Include="HunterShoot.h" />
+    <ClInclude Include="RogueRoll.h">
+      <Filter>Vania\Actions\Rogue</Filter>
+    </ClInclude>
+    <ClInclude Include="RogueCrounch.h">
+      <Filter>Vania\Actions\Rogue</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Vania">

@@ -18,9 +18,9 @@ namespace GameView
 		//myEntity = new MyEntity(&myTexture, sf::Vector2u(3, 2), 0.001f, 0.01f);
 		//Tileset entityTileset = {};
 		//entity = new Entity();
-		entities.push_back(new Rogue());
-		entities.push_back(new Monk());
 		entities.push_back(new Hunter());
+		entities.push_back(new Monk());
+		entities.push_back(new Rogue());
 
 		//test = new Platform(&myTexture, Vector2f(100.0f, 30.0f), Vector2f(200.0f, 150.0f));
 		//myEntity = new MyEntity(&myTexture,sf::Vector2f(20.0f,45.0f), sf::Vector2u(3, 2), 0.001f, 0.1f);

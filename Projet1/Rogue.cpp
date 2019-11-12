@@ -3,15 +3,16 @@
 #include "HeroActionsEnum.h"
 #include "Standing.h"
 #include "Walking.h"
-#include "Crounching.h"
+#include "RogueCrounch.h"
 #include "Jumping.h"
 #include "RogueAttack.h"
+#include "RogueRoll.h"
 
 Rogue::Rogue() : Hero("Rogue", 20, 40)
 {
 
 	acc = 1000;
-	maxVelX = 400;
+	maxVelX = 500;
 	drag = 1200;
 	jumpingStrength = 700;
 	airdrag = 400;
@@ -45,7 +46,7 @@ void Rogue::ChangeAction(int enumIndex)
 	case CROUNCH:
 		animator.ChangeAnimation("Crounch");
 		delete CurrentAction;
-		CurrentAction = new Crounching(this);
+		CurrentAction = new RogueCrounch(this);
 		break;
 	case JUMP:
 		animator.ChangeAnimation("Jump");
@@ -57,7 +58,11 @@ void Rogue::ChangeAction(int enumIndex)
 		delete CurrentAction;
 		CurrentAction = new RogueAttack(this);
 		break;
-
+	case ROLL:
+		animator.ChangeAnimation("Roll");
+		delete CurrentAction;
+		CurrentAction = new RogueRoll(this);
+		break;
 	}
 }
 
