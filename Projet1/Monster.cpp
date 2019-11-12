@@ -1,6 +1,6 @@
 #include "Monster.h"
 
-Monster::Monster(string unitName, short baseDamage, short speed, short maxHP) : Character(unitName, baseDamage, speed, maxHP)
+Monster::Monster(string unitName, short baseDamage, short maxHP) : Character(unitName, baseDamage, maxHP)
 {
 }
 

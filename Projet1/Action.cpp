@@ -1,8 +1,9 @@
 #include "Action.h"
+#include "Entity.h"
 
-Action::Action()
+Action::Action(Entity* e)
 {
-
+	parent = e;
 }
 
 Action::~Action()

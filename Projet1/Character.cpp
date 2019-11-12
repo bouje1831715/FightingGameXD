@@ -2,11 +2,10 @@
 
 
 
-Character::Character(string unitName, short baseDamage, short speed, short maxHP)
+Character::Character(string unitName, short baseDamage, short maxHP)
 {
 	this->UnitName = unitName;
 	this->BaseDamage = baseDamage;
-	this->Speed = speed;
 	this->MaxHP = maxHP;
 	this->CurrentHP = maxHP;
 }

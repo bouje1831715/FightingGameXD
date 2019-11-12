@@ -23,12 +23,13 @@ void Animator::AddAnimation(Animation* a, string name)
 
 void Animator::ChangeAnimation(string name)
 {
+	currentAnimation->Reset();
 	currentAnimation = animations[name];
 }
 
-Sprite* Animator::GetSprite()
+Sprite* Animator::GetSprite(bool reverse)
 {
-	return currentAnimation->GetSprite();
+	return currentAnimation->GetSprite(reverse);
 }
 
 void Animator::Update()

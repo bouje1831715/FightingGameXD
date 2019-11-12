@@ -21,7 +21,7 @@ class Character :
 	public Entity
 {
 public:
-	Character(string unitName, short baseDamage, short speed, short maxHP);
+	Character(string unitName, short baseDamage, short maxHP);
 	~Character();
 	
 	///<summary>Return true if the character is still alive</summary>
@@ -35,6 +35,5 @@ protected:
 	short CurrentHP;
 	short MaxHP;
 	short BaseDamage;
-	short Speed;
 };
 

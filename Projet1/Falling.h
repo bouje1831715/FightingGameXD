@@ -1,11 +1,11 @@
 #pragma once
 #include "Action.h"
-class PlayerStanding :
+class Falling :
 	public Action
 {
 public:
-	PlayerStanding();
-	~PlayerStanding();
+	Falling(Entity* e);
+	~Falling();
 	int Update();
 };
 

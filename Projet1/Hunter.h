@@ -7,9 +7,11 @@ class Hunter :
 	public Hero
 {
 public:
-	Hunter(string unitName, short baseDamage, short speed, short maxHP);
+	Hunter();
 	~Hunter();
-	DamageInfo GetDamage() override;
+	//DamageInfo GetDamage() override;
+	void ChangeAction(int enumIndex);
 private:
 	Bullet EquipedBullet;
+	void AddAnimations();
 };

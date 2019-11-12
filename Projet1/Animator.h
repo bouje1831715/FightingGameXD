@@ -11,7 +11,7 @@ public:
 
 	void AddAnimation(Animation* a, string name);
 	void ChangeAnimation(string name);
-	Sprite* GetSprite();
+	Sprite* GetSprite(bool reverse = false);
 	void Update();
 private:
 	Animation* currentAnimation;

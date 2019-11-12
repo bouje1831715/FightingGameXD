@@ -21,24 +21,40 @@ public:
 	static bool GetKeyState(Keys K);
 
 private:
-	static vector<Keyboard::Key> buttonUP;
-	static vector<Keyboard::Key> buttonDOWN;
-	static vector<Keyboard::Key> buttonLEFT;
-	static vector<Keyboard::Key> buttonRIGHT;
+	static vector<Keyboard::Key> keysUP;
+	static vector<Keyboard::Key> keysDOWN;
+	static vector<Keyboard::Key> keysLEFT;
+	static vector<Keyboard::Key> keysRIGHT;
+	static vector<int> buttonsUP;
+	static vector<int> buttonsDOWN;
+	static vector<int> buttonsLEFT;
+	static vector<int> buttonsRIGHT;
 
-	static vector<Keyboard::Key> buttonA;
-	static vector<Keyboard::Key> buttonB;
-	static vector<Keyboard::Key> buttonX;
-	static vector<Keyboard::Key> buttonY;
+	static vector<Keyboard::Key> keysA;
+	static vector<Keyboard::Key> keysB;
+	static vector<Keyboard::Key> keysX;
+	static vector<Keyboard::Key> keysY;
+	static vector<int> buttonsA;
+	static vector<int> buttonsB;
+	static vector<int> buttonsX;
+	static vector<int> buttonsY;
 
-	static vector<Keyboard::Key> buttonL1;
-	static vector<Keyboard::Key> buttonL2;
-	static vector<Keyboard::Key> buttonL3;
-	static vector<Keyboard::Key> buttonR1;
-	static vector<Keyboard::Key> buttonR2;
-	static vector<Keyboard::Key> buttonR3;
+	static vector<Keyboard::Key> keysL1;
+	static vector<Keyboard::Key> keysL2;
+	static vector<Keyboard::Key> keysL3;
+	static vector<Keyboard::Key> keysR1;
+	static vector<Keyboard::Key> keysR2;
+	static vector<Keyboard::Key> keysR3;
+	static vector<int> buttonsL1;
+	static vector<int> buttonsL2;
+	static vector<int> buttonsL3;
+	static vector<int> buttonsR1;
+	static vector<int> buttonsR2;
+	static vector<int> buttonsR3;
 
-	static vector<Keyboard::Key> buttonStart;
-	static vector<Keyboard::Key> buttonSelect;
+	static vector<Keyboard::Key> keysStart;
+	static vector<Keyboard::Key> keysSelect;
+	static vector<int> buttonsStart;
+	static vector<int> buttonsSelect;
 };
 

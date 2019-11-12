@@ -7,13 +7,8 @@ class Hero :
 	public Character
 {
 public:
-	Hero(string unitName, short baseDamage, short speed, short maxHP);
+	Hero(string unitName, short baseDamage, short maxHP);
 	~Hero();
 	virtual void ChangeAction(int enumPlaceholder) = 0;
-protected:
-	InputManager IM;
-	int vel;
-	int acc;
-	bool isJumping;
 };
 

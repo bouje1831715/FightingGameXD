@@ -9,7 +9,7 @@ struct Coord {
 	int y;
 };
 
-struct Tileset {
+struct Spritesheet {
 	sf::Texture* texture;
 	int nbRows;
 	int nbColums;
@@ -18,20 +18,24 @@ struct Tileset {
 class Animation
 {
 public:
-	Animation(Tileset ts, vector<Coord> indexes, vector<int> showTimes, bool loop = true);
+	Animation(Spritesheet ss, vector<Coord> indexes, vector<int> showTimes, bool loop = true);
 	~Animation();
 	void Update();
-	Sprite* GetSprite();
+	Sprite* GetSprite(bool reverse = false);
+	void Reset();
 
 private:
 	int currentFrame;
 	float currentTime;
 
 	sf::Sprite* currentSprite;
-	sf::IntRect uvReckt;
+	sf::IntRect uvRect;
 
-	Tileset ts;
+	Spritesheet spritesheet;
 	vector<Coord> indexes;
 	vector<int> showTimes;
+
+	int spriteWidth;
+	int spriteHeight;
 };
 
