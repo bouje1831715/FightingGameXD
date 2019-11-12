@@ -1,150 +1,311 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="Collider.cpp" />
-    <ClCompile Include="Animation.cpp" />
-    <ClCompile Include="EntityState.cpp" />
-    <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Monster.cpp" />
-    <ClCompile Include="Object.cpp" />
-    <ClCompile Include="Platform.cpp" />
+    <ClCompile Include="Level.cpp" />
+    <ClCompile Include="LevelLoader.cpp" />
     <ClCompile Include="Stage.cpp" />
-    <ClCompile Include="State.cpp" />
-    <ClCompile Include="World.cpp" />
-    <ClCompile Include="StateMachine.cpp" />
-    <ClCompile Include="Utils.cpp" />
-    <ClCompile Include="Game.cpp">
-      <Filter>Personnage</Filter>
+    <ClCompile Include="Character.cpp">
+      <Filter>Vania\Character</Filter>
     </ClCompile>
-    <ClCompile Include="Manager\StateManager.cpp">
-      <Filter>Manager</Filter>
     <ClCompile Include="Hero.cpp">
-      <Filter>Personnage</Filter>
+      <Filter>Vania\Character</Filter>
     </ClCompile>
     <ClCompile Include="Hunter.cpp">
-      <Filter>Personnage</Filter>
-    </ClCompile>
-    <ClCompile Include="Character.cpp">
-      <Filter>Personnage</Filter>
+      <Filter>Vania\Character\Hero</Filter>
     </ClCompile>
     <ClCompile Include="Monk.cpp">
-      <Filter>Personnage</Filter>
+      <Filter>Vania\Character\Hero</Filter>
     </ClCompile>
-    <ClCompile Include="Level.cpp">
-      <Filter>Level</Filter>
-    </ClCompile>
-    <ClCompile Include="LevelLoader.cpp">
-      <Filter>Level</Filter>
+    <ClCompile Include="Monster.cpp">
+      <Filter>Vania\Character</Filter>
     </ClCompile>
     <ClCompile Include="Manager\AssetManager.cpp">
-      <Filter>Manager</Filter>
-    </ClCompile>
-    <ClCompile Include="Manager\StateManager.cpp">
-      <Filter>Manager</Filter>
-    </ClCompile>
-    <ClCompile Include="Action.cpp" />
-    <ClCompile Include="Animator.cpp" />
-    <ClCompile Include="InputManager.cpp" />
-    <ClCompile Include="TimeManager.cpp" />
-    <ClCompile Include="PlayerStanding.cpp" />
-    <ClCompile Include="Entity.cpp">
-      <Filter>Personnage</Filter>
-    </ClCompile>
-    <ClCompile Include="Action.cpp" />
-    <ClCompile Include="Animator.cpp" />
-    <ClCompile Include="Entity.cpp" />
-    <ClCompile Include="TimeManager.cpp">
       <Filter>Manager</Filter>
     </ClCompile>
     <ClCompile Include="InputManager.cpp">
       <Filter>Manager</Filter>
     </ClCompile>
-    <ClCompile Include="PlayerStanding.cpp">
-      <Filter>MetroidVania\PlayerAction</Filter>
+    <ClCompile Include="TimeManager.cpp">
+      <Filter>Manager</Filter>
     </ClCompile>
+    <ClCompile Include="Settings.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="World.cpp">
+      <Filter>Vania</Filter>
+    </ClCompile>
+    <ClCompile Include="MonkRoundhouse.cpp">
+      <Filter>Vania\Actions\Monk</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Animator.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Collider.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityState.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="StateMachine.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Manager\StateManager.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="State.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Platform.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="MonkJump.cpp">
+      <Filter>Vania\Actions\Monk</Filter>
+    </ClCompile>
+    <ClCompile Include="MonkFall.cpp">
+      <Filter>Vania\Actions\Monk</Filter>
+    </ClCompile>
+    <ClCompile Include="MonkPunch.cpp">
+      <Filter>Vania\Actions\Monk</Filter>
+    </ClCompile>
+    <ClCompile Include="MonkRisingKick.cpp">
+      <Filter>Vania\Actions\Monk</Filter>
+    </ClCompile>
+    <ClCompile Include="MonkSecondJump.cpp">
+      <Filter>Vania\Actions\Monk</Filter>
+    </ClCompile>
+    <ClCompile Include="MonkDiveKick.cpp">
+      <Filter>Vania\Actions\Monk</Filter>
+    </ClCompile>
+    <ClCompile Include="HunterJump.cpp">
+      <Filter>Vania\Actions\Hunter</Filter>
+    </ClCompile>
+    <ClCompile Include="HunterJumpMid.cpp">
+      <Filter>Vania\Actions\Hunter</Filter>
+    </ClCompile>
+    <ClCompile Include="MonkCrounching.cpp">
+      <Filter>Vania\Actions\Monk</Filter>
+    </ClCompile>
+    <ClCompile Include="RogueAttack.cpp">
+      <Filter>Vania\Actions\Rogue</Filter>
+    </ClCompile>
+    <ClCompile Include="MonkWalking.cpp">
+      <Filter>Vania\Actions\Monk</Filter>
+    </ClCompile>
+    <ClCompile Include="Rogue.cpp">
+      <Filter>Vania\Character\Hero</Filter>
+    </ClCompile>
+    <ClCompile Include="MonkHoldAttack.cpp">
+      <Filter>Vania\Actions\Monk</Filter>
+    </ClCompile>
+    <ClCompile Include="Crounching.cpp">
+      <Filter>Engine\GenericAction - player</Filter>
+    </ClCompile>
+    <ClCompile Include="Falling.cpp">
+      <Filter>Engine\GenericAction - player</Filter>
+    </ClCompile>
+    <ClCompile Include="Jumping.cpp">
+      <Filter>Engine\GenericAction - player</Filter>
+    </ClCompile>
+    <ClCompile Include="Knockback.cpp">
+      <Filter>Engine\GenericAction - player</Filter>
+    </ClCompile>
+    <ClCompile Include="Standing.cpp">
+      <Filter>Engine\GenericAction - player</Filter>
+    </ClCompile>
+    <ClCompile Include="Walking.cpp">
+      <Filter>Engine\GenericAction - player</Filter>
+    </ClCompile>
+    <ClCompile Include="Action.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="RogueRoll.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Collider.h" />
-    <ClInclude Include="Animation.h" />
-    <ClInclude Include="Game.h" />
-    <ClInclude Include="EntityState.h" />
-    <ClInclude Include="Monster.h" />
-
-    <ClInclude Include="Object.h" />
-    <ClInclude Include="Platform.h" />
+    <ClInclude Include="Level.h" />
+    <ClInclude Include="LevelLoader.h" />
     <ClInclude Include="Stage.h" />
-    <ClInclude Include="State.h" />
-
-    <ClInclude Include="Manager\AssetManager.h">
-      <Filter>Manager</Filter>
-    </ClInclude>
-    <ClInclude Include="Manager\StateManager.h">
-      <Filter>Manager</Filter>
-    <ClInclude Include="World.h" />
-    <ClInclude Include="StateMachine.h" />
-    <ClInclude Include="Utils.h" />
-    <ClInclude Include="Game.h">
-      <Filter>Personnage</Filter>
+    <ClInclude Include="Character.h">
+      <Filter>Vania\Character</Filter>
     </ClInclude>
     <ClInclude Include="Hero.h">
-      <Filter>Personnage</Filter>
+      <Filter>Vania\Character</Filter>
     </ClInclude>
     <ClInclude Include="Hunter.h">
-      <Filter>Personnage</Filter>
-    </ClInclude>
-    <ClInclude Include="Character.h">
-      <Filter>Personnage</Filter>
+      <Filter>Vania\Character\Hero</Filter>
     </ClInclude>
     <ClInclude Include="Monk.h">
-      <Filter>Personnage</Filter>
+      <Filter>Vania\Character\Hero</Filter>
     </ClInclude>
-    <ClInclude Include="Level.h">
-      <Filter>Level</Filter>
+    <ClInclude Include="Monster.h">
+      <Filter>Vania\Character</Filter>
     </ClInclude>
-    <ClInclude Include="LevelLoader.h">
-      <Filter>Level</Filter>
+    <ClInclude Include="HeroActionsEnum.h">
+      <Filter>Vania\Actions</Filter>
     </ClInclude>
     <ClInclude Include="Manager\AssetManager.h">
-      <Filter>Manager</Filter>
-    </ClInclude>
-    <ClInclude Include="Manager\StateManager.h">
-      <Filter>Manager</Filter>
-    </ClInclude>
-    <ClInclude Include="Action.h" />
-    <ClInclude Include="Animator.h" />
-    <ClInclude Include="HeroActionsEnum.h" />
-    <ClInclude Include="InputManager.h" />
-    <ClInclude Include="TimeManager.h" />
-    <ClInclude Include="PlayerStanding.h" />
-    <ClInclude Include="Entity.h">
-      <Filter>Personnage</Filter>
-    </ClInclude>
-    <ClInclude Include="Action.h" />
-    <ClInclude Include="Animator.h" />
-    <ClInclude Include="Entity.h" />
-    <ClInclude Include="HeroActionsEnum.h" />
-    <ClInclude Include="TimeManager.h">
       <Filter>Manager</Filter>
     </ClInclude>
     <ClInclude Include="InputManager.h">
       <Filter>Manager</Filter>
     </ClInclude>
-    <ClInclude Include="PlayerStanding.h">
-      <Filter>MetroidVania\PlayerAction</Filter>
+    <ClInclude Include="TimeManager.h">
+      <Filter>Manager</Filter>
     </ClInclude>
+    <ClInclude Include="Settings.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="World.h">
+      <Filter>Vania</Filter>
+    </ClInclude>
+    <ClInclude Include="MonkRoundhouse.h">
+      <Filter>Vania\Actions\Monk</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Animator.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Collider.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityState.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="StateMachine.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Manager\StateManager.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="State.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Platform.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="MonkJump.h">
+      <Filter>Vania\Actions\Monk</Filter>
+    </ClInclude>
+    <ClInclude Include="MonkFall.h">
+      <Filter>Vania\Actions\Monk</Filter>
+    </ClInclude>
+    <ClInclude Include="MonkPunch.h">
+      <Filter>Vania\Actions\Monk</Filter>
+    </ClInclude>
+    <ClInclude Include="MonkRisingKick.h">
+      <Filter>Vania\Actions\Monk</Filter>
+    </ClInclude>
+    <ClInclude Include="MonkSecondJump.h">
+      <Filter>Vania\Actions\Monk</Filter>
+    </ClInclude>
+    <ClInclude Include="MonkDiveKick.h">
+      <Filter>Vania\Actions\Monk</Filter>
+    </ClInclude>
+    <ClInclude Include="HunterJump.h">
+      <Filter>Vania\Actions\Hunter</Filter>
+    </ClInclude>
+    <ClInclude Include="HunterJumpMid.h">
+      <Filter>Vania\Actions\Hunter</Filter>
+    </ClInclude>
+    <ClInclude Include="MonkCrounching.h">
+      <Filter>Vania\Actions\Monk</Filter>
+    </ClInclude>
+    <ClInclude Include="RogueAttack.h">
+      <Filter>Vania\Actions\Rogue</Filter>
+    </ClInclude>
+    <ClInclude Include="MonkWalking.h">
+      <Filter>Vania\Actions\Monk</Filter>
+    </ClInclude>
+    <ClInclude Include="Rogue.h">
+      <Filter>Vania\Character\Hero</Filter>
+    </ClInclude>
+    <ClInclude Include="MonkHoldAttack.h">
+      <Filter>Vania\Actions\Monk</Filter>
+    </ClInclude>
+    <ClInclude Include="Crounching.h">
+      <Filter>Engine\GenericAction - player</Filter>
+    </ClInclude>
+    <ClInclude Include="Falling.h">
+      <Filter>Engine\GenericAction - player</Filter>
+    </ClInclude>
+    <ClInclude Include="Jumping.h">
+      <Filter>Engine\GenericAction - player</Filter>
+    </ClInclude>
+    <ClInclude Include="Knockback.h">
+      <Filter>Engine\GenericAction - player</Filter>
+    </ClInclude>
+    <ClInclude Include="Standing.h">
+      <Filter>Engine\GenericAction - player</Filter>
+    </ClInclude>
+    <ClInclude Include="Walking.h">
+      <Filter>Engine\GenericAction - player</Filter>
+    </ClInclude>
+    <ClInclude Include="Action.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="RogueRoll.h" />
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="Personnage">
-      <UniqueIdentifier>{96d98fb3-c8c7-4ba4-86dc-f117e1f34f70}</UniqueIdentifier>
+    <Filter Include="Vania">
+      <UniqueIdentifier>{c9881e65-a1f1-492a-8df0-0bc037bf2e47}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Level">
-      <UniqueIdentifier>{57711eb3-b0b6-409d-a206-c4509eda7779}</UniqueIdentifier>
+    <Filter Include="Vania\Actions">
+      <UniqueIdentifier>{6280326f-4c9d-4d88-aff9-bfce854029c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vania\Actions\Monk">
+      <UniqueIdentifier>{1c5e7cdb-acb2-4410-8bf3-b2f1a21ecd69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vania\Character">
+      <UniqueIdentifier>{99ad025d-3d9d-48d9-91e5-5b0d0b8e64ba}</UniqueIdentifier>
     </Filter>
     <Filter Include="Manager">
-      <UniqueIdentifier>{189b7290-c034-46de-b6dc-583be108aaf4}</UniqueIdentifier>
+      <UniqueIdentifier>{273367c0-9094-4b0f-8fe6-e79d6ad59243}</UniqueIdentifier>
     </Filter>
-    <Filter Include="MetroidVania\PlayerAction">
-      <UniqueIdentifier>{c87cb85c-3b12-4166-9ec6-90a3d07b6217}</UniqueIdentifier>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{111c84da-ec05-44f0-84c1-e114f85ece67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vania\Character\Hero">
+      <UniqueIdentifier>{dbd5cb87-b1f2-447d-84cb-19dc2847ad55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vania\Actions\Hunter">
+      <UniqueIdentifier>{6a0382bb-5ea2-4517-9536-3f2c4bfd36af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vania\Actions\Rogue">
+      <UniqueIdentifier>{b621f45d-b28a-4bf7-9d9b-9b37b8a9e1a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\GenericAction - player">
+      <UniqueIdentifier>{10e34f31-691b-46f2-a69c-328207d86bad}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
